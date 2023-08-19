@@ -1,0 +1,3 @@
+# Ignore all .out and .log files
+*.out
+*.log
