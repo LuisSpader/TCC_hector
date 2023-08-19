@@ -11,7 +11,7 @@ ENTITY MAC_Operator_20_CSA IS
     );
     PORT (
         X : IN signed((1 * BITS) - 1 DOWNTO 0);
-        y : OUT signed(((2 * BITS) + 4) - 1 DOWNTO 0)
+        y : OUT signed((2 * BITS) - 1 DOWNTO 0)
     );
 END ENTITY;
 
@@ -65,7 +65,7 @@ BEGIN
     -- Y_125   <= X * "01111101"; -- 125
 
     s_mult <= (Y_n112 & Y_n108 & Y_n107 & Y_n76 & Y_n75 & Y_n60 & Y_n48 & Y_n33 & Y_n29 & Y_n23 & Y_3 & Y_13 & Y_46 & Y_99 & Y_104 & Y_111 & Y_114 & Y_119 & Y_124);
-    bias   <= to_unsigned(100, bias'length);
+    bias   <= to_signed(100, bias'length);
 
     A      <= unsigned(s_mult(((2 * BITS) * (0 + 1)) - 1 DOWNTO ((2 * BITS) * (0))));
     B      <= unsigned(s_mult(((2 * BITS) * (1 + 1)) - 1 DOWNTO ((2 * BITS) * (1))));
@@ -105,7 +105,7 @@ BEGIN
 
     S      <= unsigned(s_mult(((2 * BITS) * (18 + 1)) - 1 DOWNTO ((2 * BITS) * (18))));
     -- bias;
-    s_bias <= "00000000" & bias;
+    s_bias <= to_unsigned(to_integer(bias), s_bias'length);
     carry_select_adder_inst_9  : carry_select_adder GENERIC MAP(bits => 2 * bits) PORT MAP(a => S, b => s_bias, res => n0_r9);
     -- ----------------------------------------------------------------------------------------------------
     -- n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5, n0_r6, n0_r7, n0_r8, n0_r9
@@ -125,5 +125,5 @@ BEGIN
     -------------------------------------------------------------------------------------------
     -- n3_r0
     carry_select_adder_inst_18 : carry_select_adder GENERIC MAP(bits => 2 * bits) PORT MAP(a => n2_r1, b => n3_r0, res => n4_r0);
-    y <= unsigned(n4_r0);
+    y <= signed(n4_r0);
 END arch;

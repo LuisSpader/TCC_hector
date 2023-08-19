@@ -11,7 +11,7 @@ ENTITY top IS
     );
     PORT (
         X : IN signed((1 * BITS) - 1 DOWNTO 0);
-        y : OUT signed(((2 * BITS) + 4) - 1 DOWNTO 0)
+        y : OUT signed((2 * BITS) - 1 DOWNTO 0)
     );
 END ENTITY;
 
@@ -105,7 +105,7 @@ BEGIN
 
     S      <= unsigned(s_mult(((2 * BITS) * (18 + 1)) - 1 DOWNTO ((2 * BITS) * (18))));
     -- bias;
-    s_bias <= unsigned("00000000" & bias);
+    s_bias <= to_unsigned(to_integer(bias), s_bias'length);
     carry_select_adder_inst_9  : carry_select_adder GENERIC MAP(bits => 2 * bits) PORT MAP(a => S, b => s_bias, res => n0_r9);
     -- ----------------------------------------------------------------------------------------------------
     -- n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5, n0_r6, n0_r7, n0_r8, n0_r9
