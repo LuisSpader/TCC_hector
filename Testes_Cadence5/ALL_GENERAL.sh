@@ -15,9 +15,12 @@ echo "cleaning synthesis files"
 tclsh clean_all_synthesis_except_log.tcl
 # # cd ..
 
-git add --all
+git add *.txt
+git add *.sh
+git add *.tcl
+#git add --all
 script_date=$(date +%d-%m-%Y_%Hh%M)
-git commit -m "get MACs Logic Synthesis with results - $script_date"
+git commit -m "get MACs CSA Logic Synthesis with results - $script_date"
 git push
 
 
