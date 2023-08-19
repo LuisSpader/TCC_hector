@@ -1,4 +1,4 @@
-#!/bin/bash
+!/bin/bash
 # This script is a general version of the script 'my_script.sh'. It loops over each subdirectory in the a_mult_cte directory and runs the same commands in each one.
 # You can save this script as my_general_script in the a_mult_cte directory, then make it executable with 
 #     chmod +x my_general_script 
@@ -24,18 +24,18 @@ echo "intermediate_folders: $intermediate_folders"
 # MY_SCRIPT_PATH=$(dirname "$0")
 MY_SCRIPT_PATH=$(pwd)
 
-folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth*' -print | grep -v '/\.' )
-# folders=$(ls -d $MY_SCRIPT_PATH/MAC_synth* | sort -t_ -k3 -V)
+folders=$(find "$MY_SCRIPT_PATH" -type d -name 'NN_*' -print | grep -v '/\.' )
+# folders=$(ls -d $MY_SCRIPT_PATH/NN_* | sort -t_ -k3 -V)
 echo "folders: $folders"
 
 
 # Loop over each subdirectory
-# for dir in $MY_SCRIPT_PATH/MAC_synth*
+# for dir in $MY_SCRIPT_PATH/NN_*
 for dir in $folders
 do
     # for folder in $intermediate_folders
     # do
-    #     for synth in ./MAC_synth*
+    #     for synth in ./NN_*
     #     do
 
     # Go into the directory
