@@ -21,7 +21,8 @@ ARCHITECTURE arch OF top IS
 
     -------------------- SIGNALS ---------------------
     SIGNAL s_mult                                            : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
-    SIGNAL sum_all                                           : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
+    -- SIGNAL sum_all                                           : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
+    SIGNAL sum_all                                           : signed((2 * BITS) - 1 DOWNTO 0);
     SIGNAL Y_n112, Y_n108, Y_n107, Y_n76, Y_n75, Y_n60, bias : signed((1 * 2 * BITS) - 1 DOWNTO 0);
     SIGNAL Y_n48, Y_n33, Y_n29, Y_n23, Y_3, Y_13, Y_46       : signed((1 * 2 * BITS) - 1 DOWNTO 0);
     SIGNAL Y_99, Y_104, Y_111, Y_114, Y_119, Y_124           : signed((1 * 2 * BITS) - 1 DOWNTO 0);
