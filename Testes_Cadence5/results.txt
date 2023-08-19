@@ -1,0 +1,11 @@
+Folder										Number of Cells		Cell Area		Net Area		Total Area
+MAC_Operators_Carry_select/Synthesis_folder		49				2208.998		1035.475		3244.473
+MAC_Operators_Carry_select/Synthesis_folder										
+
+Folder										Highest Timing Value	Start-point																						End-point
+MAC_Operators_Carry_select/Synthesis_folder		4271					X[1]			
+MAC_Operators_Carry_select/Synthesis_folder										
+
+Folder										Leakage			Internal		Switching		Total Power
+MAC_Operators_Carry_select/Synthesis_folder		2.18643e-08		7.23477e-05		8.02234e-05		1.52593e-04
+MAC_Operators_Carry_select/Synthesis_folder								
