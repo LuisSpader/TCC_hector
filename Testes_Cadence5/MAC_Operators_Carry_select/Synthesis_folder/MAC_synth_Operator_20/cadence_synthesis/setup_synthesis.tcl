@@ -215,6 +215,12 @@ proc print_list {print_list_var {str ""}} {
 #     text_to_file $rtl_file_list_f $filePath
 # }
 
+# {0 {adder} {generic}}
+# {1 {generic} {jjj}}
+# {2 {seq} {jjj}}
+# {3 {compressor} {jjj}}
+# {4 {top} {jjj}}
+
 # {0 {parameters} {jjj}}
 # {1 {Leaky Reg ReLU mult add ROM} {MAC neuron}}
 # {2 {activation shift} {jjj}}
@@ -228,11 +234,8 @@ proc sort_by_level {input_list} {
     puts "sort_by_level pwd: [pwd] "
     # comes first
     set levels {
-        {0 {adder} {generic}}
-        {1 {generic} {jjj}}
-        {2 {seq} {jjj}}
-        {3 {compressor} {jjj}}
-        {4 {top} {jjj}}
+        {0 {carry} {jjj}}
+        {1 {top} {jjj}}
     }
     # comes after
     # global rtl_list

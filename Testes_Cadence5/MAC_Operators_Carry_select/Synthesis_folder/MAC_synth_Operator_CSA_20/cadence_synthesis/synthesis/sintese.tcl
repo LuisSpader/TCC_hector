@@ -39,6 +39,27 @@ set_attribute use_scan_seqs_for_non_dft false /
 # syn_global_effort: none
 # express: enables early feasibility analysis with much faster runtimes and reasonable quality of results (QoR)
 
+#* ================= Setting other parameters ==================
+#$ set_db auto_ungroup <both|none>
+set_db auto_ungroup none
+
+# To prevent ungrouping of all instances of a module, set the ungroup_ok attribute for the module to false:
+#$ set_db [get_db design:design .modules *name] .ungroup_ok false
+
+# To prevent ungrouping of a specific instance, set the ungroup_ok attribute for the instance to false:
+#$ set_db [get_db design:design .insts *name] .ungroup_ok false
+
+# Partitioning is the process of disassembling (partitioning) designs into more manageable block sizes. This enables faster run-times and an improved memory footprint without sacrificing the accuracy of synthesis results. To enable partitioning, set the auto_partition attribute to true before synthesis:
+#$ set_db auto_partition true
+
+# By default, Genus optimizes Worst Negative Slack (WNS) to achieve the timing requirements. During this process, it tries to fix the timing on the most critical path. It also checks the timing on all the other paths. However, Genus will not work on the other paths if it cannot improve
+# timing on the WNS.
+# ➤ To make Genus work on all the paths to reduce the total negative slack (TNS), instead of just WNS, type the following command:
+#$ set_db tns_opto true
+
+
+set_db design:top .retime true
+
 #* ================= Setting DFT ==================
 # Set the DFT scan flip-flop style for scan replacement using the following command:
 # set_db dft_scan_style muxed_scan
@@ -123,11 +144,28 @@ report power
 puts "# ----------------------- report timing -------------------------- "
 report timing
 
+
 # report_area: prints an exhaustive hierarchical area report
 # ? report_dp: prints a datapath resources report (to be done bbefore syn_map)
 # report_design_rules: print design rule violations
+<<<<<<< HEAD
+# puts "# ---------------------- report gates ----------------------------- "
 # report_gates:report libcells used, total area, and instance count summary
+# report_gates
+
+# puts "# -------------------- report_hierarchy --------------------------- "
 # report_hierarchy: prints a hierarchy report
+# report_hierarchy
+=======
+#puts "# ---------------------- report gates ----------------------------- "
+# report_gates:report libcells used, total area, and instance count summary
+#report_gates
+
+#puts "# -------------------- report_hierarchy --------------------------- "
+# report_hierarchy: prints a hierarchy report
+#report_hierarchy
+>>>>>>> 79a6fa1d (parcial synthesis Testes NN 2)
+
 # report_instance: generates a report on the specified instance
 # report_memory: prints memory usage report
 #' report_messages: prints a summary of the error messages that have been issued
@@ -135,14 +173,41 @@ report timing
 # report_qor: prints a QoR report
 # report_timing: prints a timing report
 # report_summary: prints an area, timing, and design rules report
+<<<<<<< HEAD
+# report_summary
+=======
+#report_summary
+>>>>>>> 79a6fa1d (parcial synthesis Testes NN 2)
 
+puts "######################################################## "
+puts " ################ Hierarquical Reports ################# "
+puts "# -------------------- report_area -physical
+--------------------------- "
+report_area -physical
+
+puts "# -------------------- report_timing -physical
+--------------------------- "
+report_timing -physical
+
+puts "# -------------------- report_power -physical
+--------------------------- "
+report_power -physical
+
+
+
+puts "######################################################## "
 
 #===============================================================================
 #  Build physical synthesis environment **ALTERAR ABAIXO: layout/top**
 #===============================================================================
 write_design -innovus -basename layout/top
 
-#? write_hdl > basic.syn.v
+# ? write_hdl > basic.syn.v
+<<<<<<< HEAD
+# write_hdl > basic.syn.v
+=======
+#write_hdl > basic.syn.v
+>>>>>>> 79a6fa1d (parcial synthesis Testes NN 2)
 
 # write_db [-design <design>] <db_file>: Write the design to a database file
 # write_db <db_file> -all_root_attributes -no_root_attrinutes -script_file -design <design> -quiet -verbose
@@ -152,7 +217,8 @@ write_design -innovus -basename layout/top
 # write_netlist > <filename>: generate a Gate-level netlist to a file
 # write_netlist > <filename>: prints the Gate-level netlist on Genus console
 #* Why and when is used: used in Innovus tool (physical synthesis)
-#$ write_netlist > netlist.v
+# $ write_netlist > netlist.v
+#write_netlist > netlist.v
 
 # write_script: generates a Genus constraints file
 #' Why and when is used: use it when reloading the constraints back into Genus for further optimization (optimize the Genus results)

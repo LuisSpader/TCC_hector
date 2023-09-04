@@ -4,7 +4,7 @@ USE ieee.numeric_std.ALL;
 --USE ieee.math_real.ALL;
 --use ieee.std_logic_unsigned.all;
 --use ieee.std_logic_signed.all;
-ENTITY top IS
+ENTITY MAC_CSA_20 IS
     GENERIC (
         BITS       : NATURAL := 8;
         NUM_INPUTS : NATURAL := 20
@@ -15,7 +15,7 @@ ENTITY top IS
     );
 END ENTITY;
 
-ARCHITECTURE arch OF top IS
+ARCHITECTURE arch OF MAC_CSA_20 IS
     -------------------- COMPONENTS ---------------------
     COMPONENT carry_select_adder IS
         GENERIC (
