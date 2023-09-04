@@ -13,8 +13,9 @@ ENTITY carry_select_adder IS
 END ENTITY;
 
 ARCHITECTURE rtl OF carry_select_adder IS
-    SIGNAL carry_final   : UNSIGNED(bits DOWNTO 0);
-    SIGNAL c_lsb, c0, c1 : UNSIGNED(bits/2 DOWNTO 0);
+    SIGNAL carry_final   : UNSIGNED(bits -1 DOWNTO 0);
+    SIGNAL c_lsb : UNSIGNED(bits/2 DOWNTO 0);
+	 signal  c0, c1 : UNSIGNED(bits/2 -1 DOWNTO 0);
 
     -- COMPONENT adder_generic IS
     --     GENERIC (bits : NATURAL := bits/2);
@@ -35,12 +36,13 @@ ARCHITECTURE rtl OF carry_select_adder IS
 
 BEGIN
 
-    c_lsb((BITS/2) DOWNTO 0)           <= a((BITS/2) - 1 DOWNTO 0) + b((BITS/2) - 1 DOWNTO 0);
+    c_lsb((BITS/2) DOWNTO 0)           <= '0' & a((BITS/2) - 1 DOWNTO 0) + b((BITS/2) - 1 DOWNTO 0);
     carry_final((BITS/2) - 1 DOWNTO 0) <= c_lsb((BITS/2) - 1 DOWNTO 0); -- 3 downto 0
 
     c0                                 <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1)));
 
-    c1                                 <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + '1';
+--    c1                                 <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) +  to_unsigned(1, b'length);
+    c1                                 <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) +  to_unsigned(1, 1);
 
     -- inst_LSB : adder_generic GENERIC MAP(bits/2) PORT MAP(a((BITS/2) - 1 DOWNTO 0), b((BITS/2) - 1 DOWNTO 0), c_lsb((BITS/2) DOWNTO 0));
     -- carry_final((BITS/2) - 1 DOWNTO 0) <= c_lsb((BITS/2) - 1 DOWNTO 0); -- 3 downto 0
@@ -59,12 +61,12 @@ BEGIN
     --     c1
     -- );
 
-    IF_PROC : PROCESS (c_lsb(BITS/2)) -- 4  
+    IF_PROC : PROCESS (c_lsb(BITS/2), c0, c1) -- 4  
     BEGIN
         IF c_lsb(BITS/2) = '0' THEN
-            carry_final(BITS DOWNTO BITS/2) <= c0;
+            carry_final(BITS -1 DOWNTO BITS/2) <= c0;
             ELSE
-            carry_final(BITS DOWNTO BITS/2) <= c1;
+            carry_final(BITS -1 DOWNTO BITS/2) <= c1;
         END IF;
 
     END PROCESS;
