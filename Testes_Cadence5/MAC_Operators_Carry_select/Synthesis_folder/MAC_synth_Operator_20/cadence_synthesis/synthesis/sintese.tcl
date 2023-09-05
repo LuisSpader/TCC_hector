@@ -41,7 +41,7 @@ set_attribute use_scan_seqs_for_non_dft false /
 
 #* ================= Setting other parameters ==================
 #$ set_db auto_ungroup <both|none>
-set_db auto_ungroup none
+# set_db auto_ungroup none
 
 # To prevent ungrouping of all instances of a module, set the ungroup_ok attribute for the module to false:
 #$ set_db [get_db design:design .modules *name] .ungroup_ok false
