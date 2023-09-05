@@ -58,7 +58,7 @@ set_attribute use_scan_seqs_for_non_dft false /
 #$ set_db tns_opto true
 
 
-set_db design:top .retime true
+# set_db design:top .retime true
 
 #* ================= Setting DFT ==================
 # Set the DFT scan flip-flop style for scan replacement using the following command:
