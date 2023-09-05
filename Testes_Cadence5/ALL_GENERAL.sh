@@ -18,6 +18,7 @@ tclsh clean_all_synthesis_except_log.tcl
 git add *.txt
 git add *.sh
 git add *.tcl
+git add *.csv
 #git add --all
 script_date=$(date +%d-%m-%Y_%Hh%M)
 git commit -m "get MACs CSA Logic Synthesis with results - $script_date"
