@@ -1,3 +1,466 @@
 
 # -------------- Run Logical synthesis --------------
 # Openning genus ...
+2023/09/06 12:50:29 WARNING This OS does not appear to be a Cadence supported Linux configuration.
+2023/09/06 12:50:29 For more info, please run CheckSysConf in <cdsRoot/tools.lnx86/bin/checkSysConf <productId>
+TMPDIR is being set to /tmp/genus_temp_238883_virmic09_luis.spader_8Ci4HU
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2023 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[12:51:19.199577] Configured Lic search path (21.01-s002): 5280@150.162.6.50
+
+Version: 21.17-s066_1, built Wed Mar 15 05:43:30 PDT 2023
+Options: -legacy_ui -files sintese.tcl 
+Date:    Wed Sep 06 12:51:19 2023
+Host:    virmic09 (x86_64 w/Linux 4.18.0-372.19.1.el8_6.x86_64) (4cores*4cpus*1physical cpu*Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz 6144KB) (16178900KB)
+PID:     238883
+OS:      Rocky Linux release 8.6 (Green Obsidian)
+
+
+[12:51:19.064553] Periodic Lic check successful
+[12:51:19.064561] Feature usage summary:
+[12:51:19.064561] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...
+Finished loading tool scripts (26 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source sintese.tcl
+Sourcing './utils.tcl' (Wed Sep 06 12:51:46 -03 2023)...
+  Setting attribute of root '/': 'script_search_path' = ./
+  Setting attribute of root '/': 'init_lib_search_path' = . /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef/ /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom/
+  Setting attribute of root '/': 'init_hdl_search_path' = ../rtl
+  Setting attribute of root '/': 'information_level' = 5
+  Setting attribute of root '/': 'max_cpus_per_server' = 4
+  Setting attribute of root '/': 'use_scan_seqs_for_non_dft' = false
+
+Threads Configured:3
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 8)
+        : Check to see if this construct is really needed for synthesis. Many liberty constructs are not actually required.
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 9)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 10)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 11)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 12)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 13)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 14)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 15)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 16)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 17)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 18)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'define' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 19)
+Info    : An unsupported construct was detected in this library. [LBR-40]
+        : Unknown Liberty attribute 'library_features' encountered. Ignoring (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib, Line 35)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load on line 136618 is defined after at least one cell definition. The attribute will be ignored. (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_wire_load_selection on line 136619 is defined after at least one cell definition. The attribute will be ignored. (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib)
+Warning : An attribute is used before it is defined. [LBR-511]
+        : The library level attribute default_operating_conditions on line 136620 is defined after at least one cell definition. The attr
+  Message Summary for Library PnomV180T025_STD_CELL_7RF.lib:
+  **********************************************************
+ibute will be ignored. (File /usr/eda/dk/ibm/cmrf7sf/digital_20111130/synopsys/nom//PnomV180T025_STD_CELL_7RF.lib)
+  An attribute is used before it is defined. [LBR-511]: 3
+  An unsupported construct was detected in this library. [LBR-40]: 13
+  **********************************************************
+ 
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 25.000000) in library 'PnomV180T025_STD_CELL_7RF.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FGTIE_A' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'FGTIE_A' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_A' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_A' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_B' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_B' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_C' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_C' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_D' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'TERM_D' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP_A' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP_A' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP_B' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP_B' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP_C' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'DECAP_C' must have an output pin.
+  Setting attribute of root '/': 'library' = PnomV180T025_STD_CELL_7RF.lib
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'contpr' has no resistance value.
+        : If this is the expected behavior, this message can be ignored.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via1pr' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via1pr_2x_north' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via1pr_2x_south' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via1pr_2x_east' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via1pr_2x_west' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_mar_north' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_mar_south' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_mar_east' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_mar_west' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_2x_north' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_2x_south' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_2x_east' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via2pr_2x_west' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via3pr' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via3pr_mar_north' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via3pr_mar_south' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via3pr_mar_east' has no resistance value.
+Info    : Via with no resistance will have a value of '0.0' assigned for resistance value. [PHYS-129]
+        : Via 'via3pr_mar_west' has no resistance value.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-129'.
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_I' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_H' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_F' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_E' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_D' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_C' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR3_B' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_J' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_I' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_H' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_F' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_E' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_D' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_C' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_B' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XOR2_A' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XNOR3_I' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XNOR3_H' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XNOR3_F' has non-zero origin (280, 280).
+Info    : Macro with non-zero origin. [PHYS-127]
+        : Macro 'XNOR3_E' has non-zero origin (280, 280).
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'PHYS-127'.
+
+  According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M1' [line 85 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+        : Check the wire parameter in LEF technology files.
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M2' [line 107 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M3' [line 128 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'M4' [line 149 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'MT' [line 171 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'EDGECAPACITANCE' parameter is missing for layer 'ML' [line 189 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M1' [line 85 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M2' [line 107 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M3' [line 128 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'M4' [line 149 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'MT' [line 171 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'CPERSQDIST' parameter is missing for layer 'ML' [line 189 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M1' [line 85 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M2' [line 107 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M3' [line 128 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'M4' [line 149 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'MT' [line 171 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : Missing wire parameter. [PHYS-15]
+        : 'RPERSQ' parameter is missing for layer 'ML' [line 189 in file /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef]
+Warning : The variant range of wire parameters is too large. An example of wire parameters are, a WIDTH for layer, PITCH for layer, MINSPACING for layers, etc. [PHYS-12]
+        : The variant range (0.2, 2.4) of 'MINSPACING' for layers 'M1' and 'ML' is too large.
+        : Check the consistency of the parameters, and see if you can ignore this message or you're using different LEF file with wrong parameters.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'Q' in libcell 'SLATSR_E' is 'pos_unate', but unateness determined from function is 'non_unate'.
+        : The 'timing_sense' attribute will be respected.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'Q' in libcell 'SLATSR_E' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SE' and 'Q' in libcell 'SLATSR_E'.
+        : Setting the 'timing_sense' to non_unate.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'QBAR' in libcell 'SLATSR_E' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'QBAR' in libcell 'SLATSR_E' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SE' and 'QBAR' in libcell 'SLATSR_E'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'Q' in libcell 'SLATSR_H' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'Q' in libcell 'SLATSR_H' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SE' and 'Q' in libcell 'SLATSR_H'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'QBAR' in libcell 'SLATSR_H' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'QBAR' in libcell 'SLATSR_H' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SE' and 'QBAR' in libcell 'SLATSR_H'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'Q' in libcell 'SLATSR_K' is 'pos_unate', but unateness determined from function is 'non_unate'.
+Info    : Mismatch in unateness between 'timing_sense' attribute and the function. [LBR-155]
+        : 'timing_sense' attribute between pin 'SE' and 'Q' in libcell 'SLATSR_K' is 'neg_unate', but unateness determined from function is 'non_unate'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SE' and 'Q' in libcell 'SLATSR_K'.
+Info    : Setting the maximum print count of this message to 10 if information_level is less than 9. [LBR-161]
+        : To print all the warning messages, set the information_level to 9.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'SE' and 'QBAR' in libcell 'SLATSR_K'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CIN' and 'SUM' in libcell 'ADDF_B'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'SUM' in libcell 'ADDF_B'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'SUM' in libcell 'ADDF_B'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CIN' and 'SUM' in libcell 'ADDF_C'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'SUM' in libcell 'ADDF_C'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'SUM' in libcell 'ADDF_C'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CIN' and 'SUM' in libcell 'ADDF_D'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'SUM' in libcell 'ADDF_D'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'SUM' in libcell 'ADDF_D'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CIN' and 'SUM' in libcell 'ADDF_E'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'SUM' in libcell 'ADDF_E'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'SUM' in libcell 'ADDF_E'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'CIN' and 'SUM' in libcell 'ADDF_F'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'SUM' in libcell 'ADDF_F'.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-162'.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model 'NONE' is non-monotonic.
+        : Non-monotonic wireload models can cause problems during synthesis and/or mapping.  Raising some of the points in the curve to give it a monotonic shape.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '18.2mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '17.4mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '16.6mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '15.8mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '15.0mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '14.2mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '13.4mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '12.6mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '11.8mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '11.0mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '10.2mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '9.4mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '8.6mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '7.7mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '6.9mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '6.1mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '5.3mm_chip_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '1910KCELLS_DEFAULT' is non-monotonic.
+Warning : Non-monotonic wireload model found. [LBR-81]
+        : 'Length' table in wireload model '1416KCELLS_DEFAULT' is non-monotonic.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-81'.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell NWSX cannot be found in library.
+        : Ensure that the proper library files are available and have been imported.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell GAUNUSED096 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell GAUNUSED048 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell GAUNUSED024 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell GAUNUSED012 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell GAUNUSED006 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell GAUNUSED003 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL2 cannot be found in library.
+Warning : Physical cell not defined in library. [PHYS-279]
+        : The physical (LEF) cell FILL1 cannot be found in library.
+  Setting attribute of root '/': 'lef_library' = /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//ibm_cmos7rf_sc_12Track.lef
+ --------------- read_RTL_list --------------- 
+List of files in ../:
+- ../RTL_list.txt
+- ../clean.tcl
+- ../clean_all.tcl
+- ../clean_synthesis.tcl
+- ../constraint
+- ../rtl
+- ../sim
+- ../synthesis
+- ../setup_synthesis.tcl
+ --------------- read_HDL_files --------------- 
+
+ RTL list:
+item: carry_select_adder.vhd
+item: top.vhd
+VHDL filtered_rtl_list: carry_select_adder.vhd top.vhd
+    res(15 DOWNTO 8)  <= G_0(8 DOWNTO 1) WHEN G_LSB(8) = 0 ELSE
+                                                       |
+Error   : No subprogram matching argument type profile. [VHDLPT-795] [read_hdl]
+        : Subprogram "=" in file '../rtl/carry_select_adder.vhd' on line 42, column 56.
+        : Invalid or unsupported VHDL syntax is encountered.
+Info    : Continuation. [VHDLPT-525]
+        : Required argument type profile is: [std_ulogic, universal_integer]
+	: The following interpretations were considered: 
+	: std.STANDARD."="[FILE_OPEN_STATUS, FILE_OPEN_STATUS RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[FILE_OPEN_KIND, FILE_OPEN_KIND RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[_Pseudo$StdLogicVector, _Pseudo$StdLogicVector RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[_Pseudo$StdLogic, _Pseudo$StdLogic RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[BIT_VECTOR, BIT_VECTOR RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[STRING, STRING RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[TIME, TIME RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[REAL, REAL RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[INTEGER, INTEGER RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[universal_real, universal_real RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[universal_integer, universal_integer RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[SEVERITY_LEVEL, SEVERITY_LEVEL RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[CHARACTER, CHARACTER RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[BIT, BIT RETURN BOOLEAN](implicit)
+	: std.STANDARD."="[BOOLEAN, BOOLEAN RETURN BOOLEAN](implicit)
+	: ieee.std_logic_1164."="[std_logic_vector, std_logic_vector RETURN BOOLEAN](implicit)
+	: ieee.std_logic_1164."="[std_ulogic_vector, std_ulogic_vector RETURN BOOLEAN](implicit)
+	: ieee.std_logic_1164."="[std_ulogic, std_ulogic RETURN BOOLEAN](implicit)
+	: ieee.numeric_std."="[SIGNED, INTEGER RETURN BOOLEAN]
+	: ieee.numeric_std."="[UNSIGNED, INTEGER RETURN BOOLEAN]
+	: ieee.numeric_std."="[INTEGER, SIGNED RETURN BOOLEAN]
+	: ieee.numeric_std."="[INTEGER, UNSIGNED RETURN BOOLEAN]
+	: ieee.numeric_std."="[SIGNED, SIGNED RETURN BOOLEAN]
+	: ieee.numeric_std."="[UNSIGNED, UNSIGNED RETURN BOOLEAN].
+Info    : Design unit not stored. [VHDLPT-506]
+        : Architecture carry_select_adder-rtl.
+    bias   <= to_unsigned(100, bias'length);
+              |
+Error   : Type mismatch. [VHDLPT-761] [read_hdl]
+        : In waveform element; type must be SIGNED in file '../rtl/top.vhd' on line 68, column 15.
+        : Invalid or unsupported VHDL syntax is encountered.
+Info    : Continuation. [VHDLPT-525]
+        : type is one of:
+	: ieee.numeric_std.TO_UNSIGNED[INTEGER, INTEGER RETURN UNSIGNED].
+    s_bias <= "00000000" & bias;
+              |
+Error   : Type mismatch. [VHDLPT-761] [read_hdl]
+        : In waveform element; type must be UNSIGNED in file '../rtl/top.vhd' on line 108, column 15.
+Info    : Continuation. [VHDLPT-525]
+        : type is one of:
+	: ieee.numeric_std."&"[SIGNED, SIGNED RETURN SIGNED](implicit).
+    y <= unsigned(n4_r0);
+         |
+Error   : Type mismatch. [VHDLPT-761] [read_hdl]
+        : In waveform element; type must be SIGNED in file '../rtl/top.vhd' on line 128, column 10.
+Info    : Continuation. [VHDLPT-525]
+        : type is one of:
+	: type conversion: type = UNSIGNED.
+Info    : Design unit not stored. [VHDLPT-506]
+        : Architecture top-arch.
+Info    : Summary of VHDL issues. [VHDLPT-508]
+        : 4 errors and 0 warnings reported.
+1
+Encountered problems processing file: sintese.tcl
+legacy_genus:/> exit
+
+Lic Summary:
+[12:51:58.152835] Cdslmd servers: shockley
+[12:51:58.152843] Feature usage summary:
+[12:51:58.152848] Genus_Synthesis
+
