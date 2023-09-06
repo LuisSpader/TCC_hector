@@ -114,7 +114,7 @@ BEGIN
 
     S      <= '0' & unsigned(s_mult(((2 * BITS) * (18 + 1)) - 1 DOWNTO ((2 * BITS) * (18))));
     -- bias;
-    s_bias <= '0' & "00000000" & bias;
+    s_bias <= unsigned('0') & unsigned("00000000") & unsigned(bias);
     carry_select_adder_inst_9 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => S, b => s_bias, res => n0_r9);
     -- ----------------------------------------------------------------------------------------------------
     -- n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5, n0_r6, n0_r7, n0_r8, n0_r9
