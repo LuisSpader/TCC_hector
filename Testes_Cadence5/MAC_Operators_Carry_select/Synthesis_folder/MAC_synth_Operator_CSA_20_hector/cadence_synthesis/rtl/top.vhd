@@ -20,7 +20,7 @@ ARCHITECTURE arch OF top IS
     -------------------- COMPONENTS ---------------------
     COMPONENT carry_select_adder IS
         GENERIC (
-            bits : POSITIVE := 16
+            bits : POSITIVE := BITS
         );
         PORT (
             a, b : IN UNSIGNED(bits - 1 DOWNTO 0);
