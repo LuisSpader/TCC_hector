@@ -39,7 +39,7 @@ BEGIN
 
     G_1(8 DOWNTO 0)   <= a_MSB_1 + b_MSB_1;
 
-    res(15 DOWNTO 8)  <= G_0(8 DOWNTO 1) WHEN G_LSB(8) = 0 ELSE
+    res(15 DOWNTO 8)  <= G_0(8 DOWNTO 1) WHEN G_LSB(8) == 0 ELSE
     G_1(8 DOWNTO 1);
     -- --------------------------------------------------------------------------------
     -- c_lsb((BITS/2) DOWNTO 0)           <= a((BITS/2) - 1 DOWNTO 0) + b((BITS/2) - 1 DOWNTO 0);
