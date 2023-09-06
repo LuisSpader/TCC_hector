@@ -125,5 +125,5 @@ BEGIN
     -------------------------------------------------------------------------------------------
     -- n3_r0
     carry_select_adder_inst_18 : carry_select_adder GENERIC MAP(bits => 2 * bits) PORT MAP(a => n2_r1, b => n3_r0, res => n4_r0);
-    y <= unsigned(n4_r0);
+    y <= signed(n4_r0);
 END arch;
