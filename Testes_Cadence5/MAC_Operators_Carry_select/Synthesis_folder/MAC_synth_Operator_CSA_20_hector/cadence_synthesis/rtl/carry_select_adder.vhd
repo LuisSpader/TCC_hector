@@ -27,7 +27,8 @@ BEGIN
 
     res((bits/2) - 1 DOWNTO 0)    <= G_LSB((bits/2) - 1 DOWNTO 0);
 
-    a_MSB_0                       <= a(bits - 1 DOWNTO (bits/2)) & '0';
+    #a_MSB_0                      <= a(bits - 1 DOWNTO (bits/2)) & '0';
+    a_MSB_0                       <= a(bits - 1 DOWNTO (bits/2));
 
     b_MSB_0                       <= b(bits - 1 DOWNTO (bits/2)) & '0';
 
