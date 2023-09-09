@@ -109,7 +109,7 @@ BEGIN
     P <= '0' & unsigned(s_mult(255 DOWNTO ((2 * BITS) * (15))));
     carry_select_adder_inst_7 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => O, b => P, res => n0_r7);
 
-    Q <= '0' & unsigned(s_mult(272 DOWNTO ((2 * BITS) * ((2 * BITS)))));
+    Q <= '0' & unsigned(s_mult(271 DOWNTO ((2 * BITS) * (16))));
     R <= '0' & unsigned(s_mult(287 DOWNTO ((2 * BITS) * (17))));
     carry_select_adder_inst_8 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => Q, b => R, res => n0_r8);
 
