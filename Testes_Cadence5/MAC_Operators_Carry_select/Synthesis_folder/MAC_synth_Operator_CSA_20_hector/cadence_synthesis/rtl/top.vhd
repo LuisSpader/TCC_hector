@@ -20,7 +20,7 @@ ARCHITECTURE arch OF top IS
     -------------------- COMPONENTS ---------------------
     COMPONENT carry_select_adder IS
         GENERIC (
-            bits : POSITIVE := BITS
+            bits : POSITIVE := 16
         );
         PORT (
             a, b : IN UNSIGNED(bits - 1 DOWNTO 0);
@@ -79,45 +79,45 @@ BEGIN
 
     A      <= '0' & unsigned(s_mult(((2 * BITS) * (0 + 1)) - 1 DOWNTO ((2 * BITS) * (0))));
     B      <= '0' & unsigned(s_mult(((2 * BITS) * (1 + 1)) - 1 DOWNTO ((2 * BITS) * (1))));
-    carry_select_adder_inst_0 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => A, b => B, res => n0_r0);
+    carry_select_adder_inst_0 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => A, b => B, res => n0_r0);
 
     C <= '0' & unsigned(s_mult(((2 * BITS) * (2 + 1)) - 1 DOWNTO ((2 * BITS) * (2))));
     D <= '0' & unsigned(s_mult(((2 * BITS) * (3 + 1)) - 1 DOWNTO ((2 * BITS) * (3))));
-    carry_select_adder_inst_1 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => C, b => D, res => n0_r1);
+    carry_select_adder_inst_1 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => C, b => D, res => n0_r1);
 
     E <= '0' & unsigned(s_mult(((2 * BITS) * (4 + 1)) - 1 DOWNTO ((2 * BITS) * (4))));
     F <= '0' & unsigned(s_mult(((2 * BITS) * (5 + 1)) - 1 DOWNTO ((2 * BITS) * (5))));
-    carry_select_adder_inst_2 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => E, b => F, res => n0_r2);
+    carry_select_adder_inst_2 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => E, b => F, res => n0_r2);
 
     G <= '0' & unsigned(s_mult(((2 * BITS) * (6 + 1)) - 1 DOWNTO ((2 * BITS) * (6))));
     H <= '0' & unsigned(s_mult(((2 * BITS) * (7 + 1)) - 1 DOWNTO ((2 * BITS) * (7))));
-    carry_select_adder_inst_3 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => G, b => H, res => n0_r3);
+    carry_select_adder_inst_3 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => G, b => H, res => n0_r3);
 
     I <= '0' & unsigned(s_mult(((2 * BITS) * (8 + 1)) - 1 DOWNTO ((2 * BITS) * (8))));
     J <= '0' & unsigned(s_mult(((2 * BITS) * (9 + 1)) - 1 DOWNTO ((2 * BITS) * (9))));
-    carry_select_adder_inst_4 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => I, b => J, res => n0_r4);
+    carry_select_adder_inst_4 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => I, b => J, res => n0_r4);
 
     K <= '0' & unsigned(s_mult(((2 * BITS) * (10 + 1)) - 1 DOWNTO ((2 * BITS) * (10))));
     L <= '0' & unsigned(s_mult(((2 * BITS) * (11 + 1)) - 1 DOWNTO ((2 * BITS) * (11))));
-    carry_select_adder_inst_5 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => K, b => L, res => n0_r5);
+    carry_select_adder_inst_5 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => K, b => L, res => n0_r5);
 
     M <= '0' & unsigned(s_mult(((2 * BITS) * (12 + 1)) - 1 DOWNTO ((2 * BITS) * (12))));
     N <= '0' & unsigned(s_mult(((2 * BITS) * (13 + 1)) - 1 DOWNTO ((2 * BITS) * (13))));
-    carry_select_adder_inst_6 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => M, b => N, res => n0_r6);
+    carry_select_adder_inst_6 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => M, b => N, res => n0_r6);
 
     O <= '0' & unsigned(s_mult(((2 * BITS) * (14 + 1)) - 1 DOWNTO ((2 * BITS) * (14))));
     P <= '0' & unsigned(s_mult(((2 * BITS) * (15 + 1)) - 1 DOWNTO ((2 * BITS) * (15))));
-    carry_select_adder_inst_7 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => O, b => P, res => n0_r7);
+    carry_select_adder_inst_7 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => O, b => P, res => n0_r7);
 
     Q <= '0' & unsigned(s_mult(((2 * BITS) * (16 + 1)) - 1 DOWNTO ((2 * BITS) * (16))));
     R <= '0' & unsigned(s_mult(((2 * BITS) * (17 + 1)) - 1 DOWNTO ((2 * BITS) * (17))));
-    carry_select_adder_inst_8 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => Q, b => R, res => n0_r8);
+    carry_select_adder_inst_8 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => Q, b => R, res => n0_r8);
 
     S      <= '0' & unsigned(s_mult(((2 * BITS) * (18 + 1)) - 1 DOWNTO ((2 * BITS) * (18))));
     -- bias;
     -- s_bias <= '0' & "00000000" & bias;
     s_bias <= ("000000000" & unsigned(bias));
-    carry_select_adder_inst_9 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => S, b => s_bias, res => n0_r9);
+    carry_select_adder_inst_9 : carry_select_adder GENERIC MAP(bits => (2 * bits)) PORT MAP(a => S, b => s_bias, res => n0_r9);
     -- ----------------------------------------------------------------------------------------------------
     -- n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5, n0_r6, n0_r7, n0_r8, n0_r9
     s_n0_r0 <= '0' & n0_r0;
