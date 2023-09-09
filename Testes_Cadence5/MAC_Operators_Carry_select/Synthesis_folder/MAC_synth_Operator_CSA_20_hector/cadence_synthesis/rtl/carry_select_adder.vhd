@@ -18,6 +18,7 @@ ARCHITECTURE rtl OF carry_select_adder IS
     SIGNAL a_LSB, b_LSB, G_LSB                          : UNSIGNED((bits/2) DOWNTO 0);
     SIGNAL a_MSB_0, b_MSB_0, a_MSB_1, b_MSB_1, G_0, G_1 : UNSIGNED((bits/2) + 1 DOWNTO 0);
 
+    -- SIGNAL a_MSB_0, b_MSB_0, a_MSB_1, b_MSB_1, G_0, G_1 : UNSIGNED((bits/2) DOWNTO 0);
 BEGIN
 
     a_LSB                         <= '0' & a((bits/2) - 1 DOWNTO 0);
@@ -36,12 +37,21 @@ BEGIN
 
     b_MSB_1                       <= b(bits - 1 DOWNTO (bits/2)) & '1';
 
-    G_0((bits/2) DOWNTO 0)        <= a_MSB_0 + b_MSB_0;
+    G_0((bits/2) + 1 DOWNTO 0)    <= a_MSB_0 + b_MSB_0;
 
-    G_1((bits/2) DOWNTO 0)        <= a_MSB_1 + b_MSB_1;
+    G_1((bits/2) + 1 DOWNTO 0)    <= a_MSB_1 + b_MSB_1;
 
-    res(bits - 1 DOWNTO (bits/2)) <= G_0((bits/2) DOWNTO 1) WHEN G_LSB((bits/2)) = '0' ELSE
-    G_1((bits/2) DOWNTO 1);
+    res(bits - 1 DOWNTO (bits/2)) <= G_0((bits/2) + 1 DOWNTO 2) WHEN G_LSB((bits/2)) = '0' ELSE
+    G_1((bits/2) + 1 DOWNTO 2);
+
+    -- --------------------------------------------------------------------------------
+    -- G_0((bits/2) DOWNTO 0)        <= a_MSB_0 + b_MSB_0;
+
+    -- G_1((bits/2) DOWNTO 0)        <= a_MSB_1 + b_MSB_1;
+
+    -- res(bits - 1 DOWNTO (bits/2)) <= G_0((bits/2) DOWNTO 1) WHEN G_LSB((bits/2)) = '0' ELSE
+    -- G_1((bits/2) DOWNTO 1);
+
     -- --------------------------------------------------------------------------------
     -- c_lsb((BITS/2) DOWNTO 0)           <= a((BITS/2) - 1 DOWNTO 0) + b((BITS/2) - 1 DOWNTO 0);
 
