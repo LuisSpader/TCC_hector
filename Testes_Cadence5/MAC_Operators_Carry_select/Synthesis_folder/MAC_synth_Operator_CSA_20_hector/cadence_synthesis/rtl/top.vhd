@@ -1,5 +1,5 @@
 LIBRARY ieee;
-USE ieee.std_logic_1(2 * BITS)4.ALL;
+USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 --USE ieee.math_real.ALL;
 --use ieee.std_logic_unsigned.all;
@@ -10,9 +10,9 @@ ENTITY top IS
         NUM_INPUTS : NATURAL := 20
     );
     PORT (
-        X : IN signed(((1 * BITS) - 1) DOWNTO 0);
+        X : IN signed((1 * BITS) - 1 DOWNTO 0);
         -- y : OUT signed(((2*BITS) + 4) - 1 DOWNTO 0)
-        y : OUT signed((((2 * BITS) + 4) - 1) DOWNTO 0)
+        y : OUT signed(((2 * BITS) + 4) - 1 DOWNTO 0)
     );
 END ENTITY;
 
@@ -28,27 +28,24 @@ ARCHITECTURE arch OF top IS
         );
     END COMPONENT;
     -------------------- SIGNALS ---------------------
-    SIGNAL s_mult                                                          : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
-    SIGNAL sum_all                                                         : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
-    SIGNAL bias                                                            : signed(BITS - 1 DOWNTO 0);
-    SIGNAL Y_n112, Y_n108, Y_n107, Y_n76, Y_n75, Y_n60                     : signed((1 * 2 * BITS) - 1 DOWNTO 0);
-    SIGNAL Y_n48, Y_n33, Y_n29, Y_n23, Y_3, Y_13, Y_46                     : signed((1 * 2 * BITS) - 1 DOWNTO 0);
-    SIGNAL Y_99, Y_104, Y_111, Y_114, Y_119, Y_124                         : signed((1 * 2 * BITS) - 1 DOWNTO 0);
+    SIGNAL s_mult                                                                                   : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
+    SIGNAL sum_all                                                                                  : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
+    SIGNAL bias                                                                                     : signed(BITS - 1 DOWNTO 0);
+    SIGNAL Y_n112, Y_n108, Y_n107, Y_n76, Y_n75, Y_n60                                              : signed((1 * 2 * BITS) - 1 DOWNTO 0);
+    SIGNAL Y_n48, Y_n33, Y_n29, Y_n23, Y_3, Y_13, Y_46                                              : signed((1 * 2 * BITS) - 1 DOWNTO 0);
+    SIGNAL Y_99, Y_104, Y_111, Y_114, Y_119, Y_124                                                  : signed((1 * 2 * BITS) - 1 DOWNTO 0);
     -- SIGNAL Y_125                                             : signed((1 * 2 * BITS) - 1 DOWNTO 0);
-    SIGNAL A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, s_bias : unsigned((2 * BITS) DOWNTO 0);
+    SIGNAL A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, s_bias                          : unsigned((2 * BITS) DOWNTO 0);
+    SIGNAL n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5, n0_r6, n0_r7, n0_r8, n0_r9                     : unsigned((2 * BITS) DOWNTO 0);
+    SIGNAL s_n0_r0, s_n0_r1, s_n0_r2, s_n0_r3, s_n0_r4, s_n0_r5, s_n0_r6, s_n0_r7, s_n0_r8, s_n0_r9 : unsigned((2 * BITS) + 1 DOWNTO 0);
 
-    SIGNAL n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5                        : unsigned((2 * BITS) DOWNTO 0);
-    SIGNAL n0_r6, n0_r7, n0_r8, n0_r9                                      : unsigned((2 * BITS) DOWNTO 0);
-    SIGNAL s_n0_r0, s_n0_r1, s_n0_r2, s_n0_r3, s_n0_r4                     : unsigned((2 * BITS) + 1 DOWNTO 0);
-    SIGNAL s_n0_r5, s_n0_r6, s_n0_r7, s_n0_r8, s_n0_r9                     : unsigned((2 * BITS) + 1 DOWNTO 0);
+    SIGNAL n1_r0, n1_r1, n1_r2, n1_r3, n1_r4                                                        : unsigned((2 * BITS) + 2 DOWNTO 0);
+    SIGNAL s_n1_r0, s_n1_r1, s_n1_r2, s_n1_r3, s_n1_r4                                              : unsigned((2 * BITS) + 3 DOWNTO 0);
 
-    SIGNAL n1_r0, n1_r1, n1_r2, n1_r3, n1_r4                               : unsigned((2 * BITS) + 2 DOWNTO 0);
-    SIGNAL s_n1_r0, s_n1_r1, s_n1_r2, s_n1_r3, s_n1_r4                     : unsigned((2 * BITS) + 3 DOWNTO 0);
+    SIGNAL n2_r0, n2_r1                                                                             : unsigned((2 * BITS) + 3 DOWNTO 0);
+    SIGNAL s_n2_r0, s_n2_r1                                                                         : unsigned((2 * BITS) + 4 DOWNTO 0);
 
-    SIGNAL n2_r0, n2_r1                                                    : unsigned((2 * BITS) + 3 DOWNTO 0);
-    SIGNAL s_n2_r0, s_n2_r1                                                : unsigned((2 * BITS) + 4 DOWNTO 0);
-
-    SIGNAL n3_r0, n4_r0                                                    : unsigned((2 * BITS) + 4 DOWNTO 0);
+    SIGNAL n3_r0, n4_r0                                                                             : unsigned((2 * BITS) + 4 DOWNTO 0);
 
 BEGIN
 
@@ -112,7 +109,7 @@ BEGIN
     P <= '0' & unsigned(s_mult(255 DOWNTO ((2 * BITS) * (15))));
     carry_select_adder_inst_7 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => O, b => P, res => n0_r7);
 
-    Q <= '0' & unsigned(s_mult(272 DOWNTO ((2 * BITS) * (16))));
+    Q <= '0' & unsigned(s_mult(272 DOWNTO ((2 * BITS) * ((2 * BITS)))));
     R <= '0' & unsigned(s_mult(287 DOWNTO ((2 * BITS) * (17))));
     carry_select_adder_inst_8 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => Q, b => R, res => n0_r8);
 
@@ -148,8 +145,8 @@ BEGIN
     s_n1_r3 <= '0' & n1_r3;
     s_n1_r4 <= '0' & n1_r4;
 
-    carry_select_adder_inst_15         : carry_select_adder GENERIC MAP(bits => ((2 * bits) + 3)) PORT MAP(a => s_n1_r0, b => s_n1_r1, res => n2_r0);
-    carry_select_adder_inst_(2 * BITS) : carry_select_adder GENERIC MAP(bits => ((2 * bits) + 3)) PORT MAP(a => s_n1_r2, b => s_n1_r3, res => n2_r1);
+    carry_select_adder_inst_15 : carry_select_adder GENERIC MAP(bits => ((2 * bits) + 3)) PORT MAP(a => s_n1_r0, b => s_n1_r1, res => n2_r0);
+    carry_select_adder_inst_16 : carry_select_adder GENERIC MAP(bits => ((2 * bits) + 3)) PORT MAP(a => s_n1_r2, b => s_n1_r3, res => n2_r1);
     -------------------------------------------------------------------------------------------
     -- n2_r0, n2_r1
     s_n2_r0 <= '0' & n2_r0;
