@@ -15,8 +15,8 @@ END ENTITY;
 ARCHITECTURE rtl OF carry_select_adder IS
     -- SIGNAL carry_final                                             : UNSIGNED(bits DOWNTO 0);
     -- SIGNAL c_lsb, c0, c1                                           : UNSIGNED(bits/2 DOWNTO 0);
-    SIGNAL a_LSB, b_LSB, G_LSB, G_0, G_1      : UNSIGNED((bits/2) DOWNTO 0);
-    SIGNAL a_MSB_0, b_MSB_0, a_MSB_1, b_MSB_1 : UNSIGNED((bits/2) + 1 DOWNTO 0);
+    SIGNAL a_LSB, b_LSB, G_LSB                          : UNSIGNED((bits/2) DOWNTO 0);
+    SIGNAL a_MSB_0, b_MSB_0, a_MSB_1, b_MSB_1, G_0, G_1 : UNSIGNED((bits/2) + 1 DOWNTO 0);
 
 BEGIN
 
