@@ -148,7 +148,6 @@ report timing
 # report_area: prints an exhaustive hierarchical area report
 # ? report_dp: prints a datapath resources report (to be done bbefore syn_map)
 # report_design_rules: print design rule violations
-<<<<<<< HEAD
 # puts "# ---------------------- report gates ----------------------------- "
 # report_gates:report libcells used, total area, and instance count summary
 # report_gates
@@ -156,15 +155,7 @@ report timing
 # puts "# -------------------- report_hierarchy --------------------------- "
 # report_hierarchy: prints a hierarchy report
 # report_hierarchy
-=======
-#puts "# ---------------------- report gates ----------------------------- "
-# report_gates:report libcells used, total area, and instance count summary
-#report_gates
 
-#puts "# -------------------- report_hierarchy --------------------------- "
-# report_hierarchy: prints a hierarchy report
-#report_hierarchy
->>>>>>> 79a6fa1d (parcial synthesis Testes NN 2)
 
 # report_instance: generates a report on the specified instance
 # report_memory: prints memory usage report
@@ -173,11 +164,7 @@ report timing
 # report_qor: prints a QoR report
 # report_timing: prints a timing report
 # report_summary: prints an area, timing, and design rules report
-<<<<<<< HEAD
 # report_summary
-=======
-#report_summary
->>>>>>> 79a6fa1d (parcial synthesis Testes NN 2)
 
 puts "######################################################## "
 puts " ################ Hierarquical Reports ################# "
@@ -203,11 +190,6 @@ puts "######################################################## "
 write_design -innovus -basename layout/top
 
 # ? write_hdl > basic.syn.v
-<<<<<<< HEAD
-# write_hdl > basic.syn.v
-=======
-#write_hdl > basic.syn.v
->>>>>>> 79a6fa1d (parcial synthesis Testes NN 2)
 
 # write_db [-design <design>] <db_file>: Write the design to a database file
 # write_db <db_file> -all_root_attributes -no_root_attrinutes -script_file -design <design> -quiet -verbose
