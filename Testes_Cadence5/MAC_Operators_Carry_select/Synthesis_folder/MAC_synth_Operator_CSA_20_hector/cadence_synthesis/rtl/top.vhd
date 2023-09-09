@@ -12,7 +12,7 @@ ENTITY top IS
     PORT (
         X : IN signed((1 * BITS) - 1 DOWNTO 0);
         -- y : OUT signed(((2*BITS) + 4) - 1 DOWNTO 0)
-        y : OUT signed(((2 * BITS) + 4) - 1 DOWNTO 0)
+        y : OUT signed(((2 * BITS) + 5) - 1 DOWNTO 0)
     );
 END ENTITY;
 
@@ -28,8 +28,8 @@ ARCHITECTURE arch OF top IS
         );
     END COMPONENT;
     -------------------- SIGNALS ---------------------
-    SIGNAL s_mult                                                                                   : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
-    SIGNAL sum_all                                                                                  : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
+    -- SIGNAL s_mult                                                                                   : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
+    -- SIGNAL sum_all                                                                                  : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
     SIGNAL bias                                                                                     : signed(BITS - 1 DOWNTO 0);
     SIGNAL Y_n112, Y_n108, Y_n107, Y_n76, Y_n75, Y_n60                                              : signed((1 * 2 * BITS) - 1 DOWNTO 0);
     SIGNAL Y_n48, Y_n33, Y_n29, Y_n23, Y_3, Y_13, Y_46                                              : signed((1 * 2 * BITS) - 1 DOWNTO 0);
@@ -116,7 +116,7 @@ BEGIN
     S      <= '0' & unsigned(s_mult(303 DOWNTO (2 * BITS) * (18)));
     -- bias;
     -- s_bias <= '0' & "00000000" & bias;
-    s_bias <= ("000000000" & unsigned(bias));
+    s_bias <= ("000000000" & unsigned(bias)); -- zeros because it's a positive number
     carry_select_adder_inst_9 : carry_select_adder GENERIC MAP(bits => (2 * bits + 1)) PORT MAP(a => S, b => s_bias, res => n0_r9);
     -- ----------------------------------------------------------------------------------------------------
     -- n0_r0, n0_r1, n0_r2, n0_r3, n0_r4, n0_r5, n0_r6, n0_r7, n0_r8, n0_r9
