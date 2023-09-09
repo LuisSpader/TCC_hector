@@ -28,7 +28,7 @@ ARCHITECTURE arch OF top IS
         );
     END COMPONENT;
     -------------------- SIGNALS ---------------------
-    -- SIGNAL s_mult                                                                                   : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
+    SIGNAL s_mult                                                                                   : signed(((2 * BITS) * (NUM_INPUTS - 1)) - 1 DOWNTO 0);
     -- SIGNAL sum_all                                                                                  : signed(((2 * BITS) + 4) - 1 DOWNTO 0);
     SIGNAL bias                                                                                     : signed(BITS - 1 DOWNTO 0);
     SIGNAL Y_n112, Y_n108, Y_n107, Y_n76, Y_n75, Y_n60                                              : signed((1 * 2 * BITS) - 1 DOWNTO 0);
