@@ -65,12 +65,12 @@ BEGIN
             a_MSB_1_odd                     <= a((bits - 1) DOWNTO ((bits - 1) / 2)) & '1';
             b_MSB_1_odd                     <= b((bits - 1) DOWNTO ((bits - 1) / 2)) & '1';
 
-            G_0_odd                         <= a_MSB_0 + b_MSB_0;
-            G_1_odd                         <= a_MSB_1 + b_MSB_1;
+            G_0_odd                         <= a_MSB_0_odd + b_MSB_0_odd;
+            G_1_odd                         <= a_MSB_1_odd + b_MSB_1_odd;
             -- res(16 DOWNTO 8) <= G_0(9 DOWNTO 1) WHEN G_LSB((bits/2)) = '0' ELSE
             -- G_1(9 DOWNTO 1);
-            res((bits - 1) DOWNTO (bits/2)) <= G_0((bits/2) + 1 DOWNTO 1) WHEN G_LSB((bits/2)) = '0' ELSE
-            G_1((bits/2) + 1 DOWNTO 1);
+            res((bits - 1) DOWNTO (bits/2)) <= G_0_odd((bits/2) + 1 DOWNTO 1) WHEN G_LSB((bits/2)) = '0' ELSE
+            G_1_odd((bits/2) + 1 DOWNTO 1);
 
         END GENERATE;
 
