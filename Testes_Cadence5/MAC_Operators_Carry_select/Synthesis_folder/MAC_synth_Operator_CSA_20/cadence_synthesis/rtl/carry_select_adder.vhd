@@ -80,11 +80,11 @@ BEGIN
         GENERATE
             -- When 'bits' is odd
             --             17 -1             downto    8    (9 bits)         
-            c0_odd <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1)));
+            c0_odd <= a(BITS - 1 DOWNTO BITS/2) + b(BITS - 1 DOWNTO BITS/2);
             --    c1                                 <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) +  to_unsigned(1, b'length);
-            c1_odd <= a(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + b(((BITS/2) * (2)) - 1 DOWNTO ((BITS/2) * (1))) + to_unsigned(1, 1);
+            c1_odd <= a(BITS - 1 DOWNTO BITS/2) + b(BITS - 1 DOWNTO BITS/2) + to_unsigned(1, 1);
 
-            IF_PROC : PROCESS (c_lsb(BITS/2), c0, c1) -- 4  
+            IF_PROC : PROCESS (c_lsb(BITS/2), c0_odd, c1_odd) -- 4  
             BEGIN
                 IF c_lsb(BITS/2) = '0' THEN
                     -- 16 downto 8 
