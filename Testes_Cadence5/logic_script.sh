@@ -24,7 +24,8 @@ synthesis_path="cadence_synthesis"
 # MY_SCRIPT_PATH=$(dirname "$0")
 MY_SCRIPT_PATH=$(pwd)
 
-folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth_Operator_CSA_20_hector' -print | grep -v '/\.' )
+# folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth_Operator_CSA_20_hector' -print | grep -v '/\.' )
+folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth_Operator_CSA_20' -print | grep -v '/\.' )
 #folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth*' -print | grep -v '/\.' )
 #folders=$(ls -d $MY_SCRIPT_PATH/NN_* | sort -t_ -k3 -V)
 echo " -------------------- folders --------------------"
