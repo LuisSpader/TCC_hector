@@ -9,7 +9,7 @@ set_load_unit -picofarads 1
 #
 # create_clock -name {clk} -period 5.0 -waveform {0.0 2.5} [get_ports {clk}]
 #create_clock -name {clk} -period 5.0 [get_ports {clk}]
-create_clock -name {clk} -period 7.0 [get_ports {clk}]
+# create_clock -name {clk} -period 7.0 [get_ports {clk}]
 
 set_input_delay 0.1 -clock clk [all_inputs]
 set_output_delay 0.2 -clock clk [all_outputs]
