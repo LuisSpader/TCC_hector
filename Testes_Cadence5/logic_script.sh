@@ -17,8 +17,8 @@ MY_SCRIPT_PATH=$(dirname "$0")
 # synthesis_path=""
 synthesis_path="cadence_synthesis"
 
-intermediate_folders=$(find . -type d -maxdepth 1)
-echo "intermediate_folders: $intermediate_folders"
+# intermediate_folders=$(find . -type d -maxdepth 1)
+# echo "intermediate_folders: $intermediate_folders"
 
 # Get the directory of the script
 # MY_SCRIPT_PATH=$(dirname "$0")
@@ -26,7 +26,9 @@ MY_SCRIPT_PATH=$(pwd)
 
 folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth*' -print | grep -v '/\.' )
 # folders=$(ls -d $MY_SCRIPT_PATH/NN_* | sort -t_ -k3 -V)
-echo "folders: $folders"
+echo " -------------------- folders --------------------"
+echo "$folders"
+echo " -------------------------------------------------"
 
 
 # Loop over each subdirectory
