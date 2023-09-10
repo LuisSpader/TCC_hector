@@ -1,8 +1,8 @@
 !/bin/bash
 # This script is a general version of the script 'my_script.sh'. It loops over each subdirectory in the a_mult_cte directory and runs the same commands in each one.
-# You can save this script as my_general_script in the a_mult_cte directory, then make it executable with 
-#     chmod +x my_general_script 
-# and run it with 
+# You can save this script as my_general_script in the a_mult_cte directory, then make it executable with
+#     chmod +x my_general_script
+# and run it with
 #     ./my_general_script.
 
 # tee: The tee command reads standard input, then writes it to standard output and also to any files given as arguments. This is useful when you want not only to send some data down a pipe, but also to save a copy.
@@ -10,8 +10,8 @@
 #!/bin/bash
 # --------
 # Source setup
-# source /usr/eda/scripts/setup.digital 
-source /usr/eda/scripts/setup.digital 
+# source /usr/eda/scripts/setup.digital
+source /usr/eda/scripts/setup.digital
 MY_SCRIPT_PATH=$(dirname "$0")
 
 # synthesis_path=""
@@ -24,8 +24,7 @@ synthesis_path="cadence_synthesis"
 # MY_SCRIPT_PATH=$(dirname "$0")
 MY_SCRIPT_PATH=$(pwd)
 
-# folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth*' -print | grep -v '/\.' )
-folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth_Operator_CSA_20_hector' -print | grep -v '/\.' )
+folders=$(find "$MY_SCRIPT_PATH" -type d -name 'MAC_synth*' -print | grep -v '/\.' )
 # folders=$(ls -d $MY_SCRIPT_PATH/NN_* | sort -t_ -k3 -V)
 echo " -------------------- folders --------------------"
 echo "$folders"
@@ -46,18 +45,18 @@ do
     cd $dir/$synthesis_path
 
     LOG_FILE_PATH=./synthesis/synthesis_log.txt
-    
+
     echo "MY SCRIPT PATH: $MY_SCRIPT_PATH"
     echo "dir: $dir/$synthesis_path"
     echo "log file path: $LOG_FILE_PATH"
     # echo "" > synthesis_log.txt
     # The > operator is used to overwrite the file if it exists or create a new one if it doesn't. The >> operator is used to append to the file. The 2>&1 part redirects both the stdout and stderr to the specified file. The stderr is redirected to stdout, and then the stdout is redirected to the file.
-    
+
     # Clear the log file
     pwd
     echo "" | tee $LOG_FILE_PATH
     # The command echo "" > synthesis_log.txt is used to clear the log file each time the script is run. If you want to append the logs for each run, you can remove this line.
-    
+
     cd synthesis
     LOG_FILE_PATH=./synthesis_log.txt
     #pwd
@@ -103,17 +102,17 @@ do
 
     # cd ../sim/sdf
     # irun -f file_list.f
-    
+
     # exit
 
     # # Go back to the original directory
-    # # -z: test if pattern is empty 
+    # # -z: test if pattern is empty
     # if [ -z "$synthesis_path" ]; then
     #     cd ../../../
     # else
     #     cd ../../../../
     # fi
-    
+
     #echo "######################################################################################"
     cd $MY_SCRIPT_PATH
     #echo " ------------------------ NORMAL DIRECTORY -------------------------------------------"
