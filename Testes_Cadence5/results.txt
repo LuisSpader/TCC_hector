@@ -1,14 +1,14 @@
-Folder										Number of Cells		Cell Area		Net Area		Total Area
-MAC_Operators_Carry_select/Synthesis_folder		816				41030.170		15974.561		57004.731
-MAC_Operators_Carry_select/Synthesis_folder		965				45275.059		18285.871		63560.930
-MAC_Operators_Carry_select/Synthesis_folder		1441				55394.304		26668.808		82063.112
+Folder										        Number of Cells		Cell Area		Net Area		Total Area
+MAC_synth_Operator_20/cadence_synthesis		        51				    1098.854		892.223		    1991.077
+MAC_synth_Operator_CSA_20/cadence_synthesis		    965				    45275.059		18285.871		63560.930
+MAC_synth_Operator_CSA_20_hector/cadence_synthesis	1441				55394.304		26668.808		82063.112
 
-Folder										Highest Timing Value	Start-point																						End-point
-MAC_Operators_Carry_select/Synthesis_folder		7001					X[2]			
-MAC_Operators_Carry_select/Synthesis_folder		7602					X[6]			
-MAC_Operators_Carry_select/Synthesis_folder		12426					X[0]			
+Folder										        Highest Timing Value	Start-point																						End-point
+MAC_synth_Operator_20/cadence_synthesis		        2959					X[0]			
+MAC_synth_Operator_CSA_20/cadence_synthesis		    7602					X[6]			
+MAC_synth_Operator_CSA_20_hector/cadence_synthesis	12426					X[0]			
 
-Folder										Leakage			Internal		Switching		Total Power
-MAC_Operators_Carry_select/Synthesis_folder		4.09357e-07		3.34434e-03		2.76956e-03		6.11431e-03
-MAC_Operators_Carry_select/Synthesis_folder		4.51732e-07		5.46840e-03		4.56338e-03		1.00322e-02
-MAC_Operators_Carry_select/Synthesis_folder		5.38795e-07		2.05520e-02		2.20419e-02		4.25944e-02
+Folder										        Leakage			Internal		Switching		Total Power
+MAC_synth_Operator_20/cadence_synthesis		        9.57629e-09		2.42270e-05		4.93995e-05		7.36361e-05
+MAC_synth_Operator_CSA_20/cadence_synthesis		    4.51732e-07		5.46840e-03		4.56338e-03		1.00322e-02
+MAC_synth_Operator_CSA_20_hector/cadence_synthesis	5.38795e-07		2.05520e-02		2.20419e-02		4.25944e-02

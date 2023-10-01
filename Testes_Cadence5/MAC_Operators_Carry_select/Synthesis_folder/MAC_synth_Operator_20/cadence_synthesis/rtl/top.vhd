@@ -55,25 +55,25 @@ BEGIN
     bias    <= to_signed(100, bias'length);
 
     sum_all <= ("00000" & s_mult(((2 * BITS) * (0 + 1)) - 1 DOWNTO ((2 * BITS) * (0)))) +
-    ("00000" & s_mult(((2 * BITS) * (1 + 1)) - 1 DOWNTO ((2 * BITS) * (1)))) +
-    ("00000" & s_mult(((2 * BITS) * (2 + 1)) - 1 DOWNTO ((2 * BITS) * (2)))) +
-    ("00000" & s_mult(((2 * BITS) * (3 + 1)) - 1 DOWNTO ((2 * BITS) * (3)))) +
-    ("00000" & s_mult(((2 * BITS) * (4 + 1)) - 1 DOWNTO ((2 * BITS) * (4)))) +
-    ("00000" & s_mult(((2 * BITS) * (5 + 1)) - 1 DOWNTO ((2 * BITS) * (5)))) +
-    ("00000" & s_mult(((2 * BITS) * (6 + 1)) - 1 DOWNTO ((2 * BITS) * (6)))) +
-    ("00000" & s_mult(((2 * BITS) * (7 + 1)) - 1 DOWNTO ((2 * BITS) * (7)))) +
-    ("00000" & s_mult(((2 * BITS) * (8 + 1)) - 1 DOWNTO ((2 * BITS) * (8)))) +
-    ("00000" & s_mult(((2 * BITS) * (9 + 1)) - 1 DOWNTO ((2 * BITS) * (9)))) +
-    ("00000" & s_mult(((2 * BITS) * (10 + 1)) - 1 DOWNTO ((2 * BITS) * (10)))) +
-    ("00000" & s_mult(((2 * BITS) * (11 + 1)) - 1 DOWNTO ((2 * BITS) * (11)))) +
-    ("00000" & s_mult(((2 * BITS) * (12 + 1)) - 1 DOWNTO ((2 * BITS) * (12)))) +
-    ("00000" & s_mult(((2 * BITS) * (13 + 1)) - 1 DOWNTO ((2 * BITS) * (13)))) +
-    ("00000" & s_mult(((2 * BITS) * (14 + 1)) - 1 DOWNTO ((2 * BITS) * (14)))) +
-    ("00000" & s_mult(((2 * BITS) * (15 + 1)) - 1 DOWNTO ((2 * BITS) * (15)))) +
-    ("00000" & s_mult(((2 * BITS) * (16 + 1)) - 1 DOWNTO ((2 * BITS) * (16)))) +
-    ("00000" & s_mult(((2 * BITS) * (17 + 1)) - 1 DOWNTO ((2 * BITS) * (17)))) +
-    ("00000" & s_mult(((2 * BITS) * (18 + 1)) - 1 DOWNTO ((2 * BITS) * (18)))) +
-    ("00000" & bias);
+        ("00000" & s_mult(((2 * BITS) * (1 + 1)) - 1 DOWNTO ((2 * BITS) * (1)))) +
+        ("00000" & s_mult(((2 * BITS) * (2 + 1)) - 1 DOWNTO ((2 * BITS) * (2)))) +
+        ("00000" & s_mult(((2 * BITS) * (3 + 1)) - 1 DOWNTO ((2 * BITS) * (3)))) +
+        ("00000" & s_mult(((2 * BITS) * (4 + 1)) - 1 DOWNTO ((2 * BITS) * (4)))) +
+        ("00000" & s_mult(((2 * BITS) * (5 + 1)) - 1 DOWNTO ((2 * BITS) * (5)))) +
+        ("00000" & s_mult(((2 * BITS) * (6 + 1)) - 1 DOWNTO ((2 * BITS) * (6)))) +
+        ("00000" & s_mult(((2 * BITS) * (7 + 1)) - 1 DOWNTO ((2 * BITS) * (7)))) +
+        ("00000" & s_mult(((2 * BITS) * (8 + 1)) - 1 DOWNTO ((2 * BITS) * (8)))) +
+        ("00000" & s_mult(((2 * BITS) * (9 + 1)) - 1 DOWNTO ((2 * BITS) * (9)))) +
+        ("00000" & s_mult(((2 * BITS) * (10 + 1)) - 1 DOWNTO ((2 * BITS) * (10)))) +
+        ("00000" & s_mult(((2 * BITS) * (11 + 1)) - 1 DOWNTO ((2 * BITS) * (11)))) +
+        ("00000" & s_mult(((2 * BITS) * (12 + 1)) - 1 DOWNTO ((2 * BITS) * (12)))) +
+        ("00000" & s_mult(((2 * BITS) * (13 + 1)) - 1 DOWNTO ((2 * BITS) * (13)))) +
+        ("00000" & s_mult(((2 * BITS) * (14 + 1)) - 1 DOWNTO ((2 * BITS) * (14)))) +
+        ("00000" & s_mult(((2 * BITS) * (15 + 1)) - 1 DOWNTO ((2 * BITS) * (15)))) +
+        ("00000" & s_mult(((2 * BITS) * (16 + 1)) - 1 DOWNTO ((2 * BITS) * (16)))) +
+        ("00000" & s_mult(((2 * BITS) * (17 + 1)) - 1 DOWNTO ((2 * BITS) * (17)))) +
+        ("00000" & s_mult(((2 * BITS) * (18 + 1)) - 1 DOWNTO ((2 * BITS) * (18)))) +
+        ("00000" & bias);
 
     -- sum_all <= (s_mult(((2 * BITS) * (0 + 1)) - 1 DOWNTO ((2 * BITS) * (0)))) +
     -- (s_mult(((2 * BITS) * (1 + 1)) - 1 DOWNTO ((2 * BITS) * (1)))) +
