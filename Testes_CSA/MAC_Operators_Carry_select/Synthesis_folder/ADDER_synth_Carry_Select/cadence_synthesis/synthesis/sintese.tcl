@@ -87,8 +87,8 @@ set_attribute lef_library {cmos7rf_6ML_tech.lef ibm_cmos7rf_sc_12Track.lef } /
 #  **ALTERAR ABAIXO**
 #===============================================================================
 # read_hdl -vhdl top.vhd
-# read_hdl -verilog top.vhd
-read_HDL_files "../" "RTL_list.txt"
+read_hdl -verilog top.vhd
+# read_HDL_files "../" "RTL_list.txt"
 elaborate top
 
 # check unresolved references and empty modules
