@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY carry_select_adder IS
+ENTITY top IS
     GENERIC (
         bits : POSITIVE := 16
     );
@@ -12,11 +12,8 @@ ENTITY carry_select_adder IS
     );
 END ENTITY;
 
-ARCHITECTURE rtl OF carry_select_adder IS
-    -- SIGNAL carry_final                                             : UNSIGNED(bits DOWNTO 0);
-    -- SIGNAL c_lsb, c0, c1                                           : UNSIGNED(bits/2 DOWNTO 0);
+ARCHITECTURE rtl OF top IS
     SIGNAL a_LSB, b_LSB, G_LSB                                                  : UNSIGNED((bits/2) DOWNTO 0); -- 8 downto 0 ( 9 bits)
-    -- SIGNAL a_MSB_0, b_MSB_0, a_MSB_1, b_MSB_1, G_0, G_1 : UNSIGNED((bits/2) + 1 DOWNTO 0);
 
     SIGNAL a_MSB_0, b_MSB_0, a_MSB_1, b_MSB_1, G_0, G_1                         : UNSIGNED((bits/2) DOWNTO 0);
     SIGNAL a_MSB_0_odd, b_MSB_0_odd, a_MSB_1_odd, b_MSB_1_odd, G_0_odd, G_1_odd : UNSIGNED((bits/2) + 1 DOWNTO 0);
@@ -49,7 +46,7 @@ BEGIN
         res((bits - 1) DOWNTO (bits/2)) <= G_0((bits/2) DOWNTO 1) WHEN G_LSB((bits/2)) = '0' ELSE
         G_1((bits/2) DOWNTO 1);
 
-        ELSE
+    ELSE
         GENERATE
             -- When 'bits' is odd 16 downto 9 (8 bits)
             --                                        17/2 = 8 -1 = 7 (8 bits)

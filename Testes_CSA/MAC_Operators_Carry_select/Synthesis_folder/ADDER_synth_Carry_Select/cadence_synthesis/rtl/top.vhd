@@ -2,7 +2,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY carry_select_adder IS
+ENTITY top IS
     -- GENERIC (
     --     bits : POSITIVE := 16
     -- );
@@ -12,7 +12,7 @@ ENTITY carry_select_adder IS
     );
 END ENTITY;
 
-ARCHITECTURE rtl OF carry_select_adder IS
+ARCHITECTURE rtl OF top IS
     SIGNAL carry_final    : UNSIGNED(15 DOWNTO 0);
     SIGNAL c_lsb          : UNSIGNED(16 DOWNTO 0);
     SIGNAL c0, c1         : UNSIGNED(15 DOWNTO 0);
