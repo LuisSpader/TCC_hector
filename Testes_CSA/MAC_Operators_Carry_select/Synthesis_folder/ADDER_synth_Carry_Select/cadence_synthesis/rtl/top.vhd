@@ -28,9 +28,9 @@ BEGIN
     --    c1                                 <= a(16 - 1 DOWNTO 8) + b(16 - 1 DOWNTO 8) +  to_unsigned(1, b'length);
     c1                      <= a(16 - 1 DOWNTO 8) + b(16 - 1 DOWNTO 8) + to_unsigned(1, 1);
 
-    IF_PROC : PROCESS (c_lsb8, c0, c1) -- 4  
+    IF_PROC : PROCESS (c_lsb, c0, c1) -- 4  
     BEGIN
-        IF c_lsb8 = '0' THEN
+        IF c_lsb = '0' THEN
             -- 15 downto 8 
             carry_final(15 DOWNTO 8) <= c0;
         ELSE
