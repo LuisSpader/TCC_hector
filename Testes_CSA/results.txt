@@ -1,0 +1,14 @@
+Folder										Number of Cells		Cell Area		Net Area		Total Area
+ADDER_synth_Carry_Select/cadence_synthesis		19				1369.805		657.187		2026.992
+ADDER_synth_Carry_Select_Hector/cadence_synthesis		45				2182.656		1145.513		3328.169
+ADDER_synth_Operator/cadence_synthesis		18				1366.042		642.481		2008.523
+
+Folder										Highest Timing Value	Start-point																						End-point
+ADDER_synth_Carry_Select/cadence_synthesis		4001					a[0]			
+ADDER_synth_Carry_Select_Hector/cadence_synthesis		4970					a[0]			
+ADDER_synth_Operator/cadence_synthesis		3664					b[0]			
+
+Folder										Leakage			Internal		Switching		Total Power
+ADDER_synth_Carry_Select/cadence_synthesis		1.35555e-08		4.19828e-05		4.70141e-05		8.90105e-05
+ADDER_synth_Carry_Select_Hector/cadence_synthesis		2.26284e-08		1.26429e-04		1.27688e-04		2.54139e-04
+ADDER_synth_Operator/cadence_synthesis		1.37883e-08		4.21026e-05		4.66545e-05		8.87709e-05
