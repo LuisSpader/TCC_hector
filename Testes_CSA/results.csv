@@ -1,4 +1,4 @@
 Folder, Number of Cells, Cell Area, Net Area, Total Area, Highest Timing Value, Start-point, End-point, Leakage Power, Internal Power, Switching Power, Total Power
-ADDER_synth_Carry_Select/cadence_synthesis, 19, 1369.805, 657.187, 2026.992, 4001, a[0], , 1.35555e-08,4.19828e-05, 4.70141e-05, 8.90105e-05
-ADDER_synth_Carry_Select_Hector/cadence_synthesis, 45, 2182.656, 1145.513, 3328.169, 4970, a[0], , 2.26284e-08,1.26429e-04, 1.27688e-04, 2.54139e-04
-ADDER_synth_Operator/cadence_synthesis, 18, 1366.042, 642.481, 2008.523, 3664, b[0], , 1.37883e-08,4.21026e-05, 4.66545e-05, 8.87709e-05
+MAC_synth_Operator_20/cadence_synthesis, 51, 1098.854, 892.223, 1991.077, 2959, X[0], , 9.57629e-09,2.42270e-05, 4.93995e-05, 7.36361e-05
+MAC_synth_Operator_CSA_20/cadence_synthesis, 965, 45275.059, 18285.871, 63560.930, 7602, X[6], , 4.51732e-07,5.46840e-03, 4.56338e-03, 1.00322e-02
+MAC_synth_Operator_CSA_20_hector/cadence_synthesis, 1441, 55394.304, 26668.808, 82063.112, 12426, X[0], , 5.38795e-07,2.05520e-02, 2.20419e-02, 4.25944e-02
