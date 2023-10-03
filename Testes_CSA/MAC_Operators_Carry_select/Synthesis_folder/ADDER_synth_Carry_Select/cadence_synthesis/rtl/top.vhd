@@ -14,7 +14,7 @@ END ENTITY;
 
 ARCHITECTURE rtl OF top IS
     SIGNAL carry_final : UNSIGNED(15 DOWNTO 0);
-    SIGNAL c_lsb       : UNSIGNED(16 DOWNTO 0);
+    SIGNAL c_lsb       : UNSIGNED(8 DOWNTO 0);
     SIGNAL c0, c1      : UNSIGNED(7 DOWNTO 0);
     -- SIGNAL c0_odd, c1_odd : UNSIGNED(16 DOWNTO 0);
 
