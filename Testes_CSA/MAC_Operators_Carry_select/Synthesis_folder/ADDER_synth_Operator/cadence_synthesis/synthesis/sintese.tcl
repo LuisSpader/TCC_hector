@@ -166,21 +166,21 @@ report timing
 # report_summary: prints an area, timing, and design rules report
 # report_summary
 
-puts "######################################################## "
-puts " ################ Hierarquical Reports ################# "
-puts "# -------------------- report_area -physical
---------------------------- "
-report_area -physical
+# puts "######################################################## "
+# puts " ################ Hierarquical Reports ################# "
+# puts "# -------------------- report_area -physical
+# --------------------------- "
+# report_area -physical
 
-puts "# -------------------- report_timing -physical
---------------------------- "
-report_timing -physical
+# puts "# -------------------- report_timing -physical
+# --------------------------- "
+# report_timing -physical
 
-puts "# -------------------- report_power -physical
---------------------------- "
-report_power -physical
+# puts "# -------------------- report_power -physical
+# --------------------------- "
+# report_power -physical
 
-puts "######################################################## "
+# puts "######################################################## "
 
 #===============================================================================
 #  Build physical synthesis environment **ALTERAR ABAIXO: layout/top**
