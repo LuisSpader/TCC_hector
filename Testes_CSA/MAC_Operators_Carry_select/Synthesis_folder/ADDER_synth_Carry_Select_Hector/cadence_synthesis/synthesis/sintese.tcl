@@ -86,8 +86,8 @@ set_attribute lef_library {cmos7rf_6ML_tech.lef ibm_cmos7rf_sc_12Track.lef } /
 #  Elaborate -> declaramos os arquivos '.vhd' abaixo (arquivo principal no final)
 #  **ALTERAR ABAIXO**
 #===============================================================================
-# read_hdl -vhdl top.vhd
-read_hdl -verilog top.vhd
+read_hdl -vhdl top.vhd
+# read_hdl -verilog top.vhd
 # read_HDL_files "../" "RTL_list.txt"
 elaborate top
 
