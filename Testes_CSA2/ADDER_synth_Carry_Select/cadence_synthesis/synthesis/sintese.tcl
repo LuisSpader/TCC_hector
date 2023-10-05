@@ -259,4 +259,4 @@ write_design -innovus -basename layout/top
 # run_fullscan_sim_sdf (file for running 'Back Annotated Simulations' or 'Non zero delay simulations')
 # run_fullscan_sim (file for running 'Zero delay simulations')
 
-exit
+#exit
