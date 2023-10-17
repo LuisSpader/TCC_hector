@@ -1,0 +1,4 @@
+Folder, Number of Cells, Cell Area, Net Area, Total Area, Highest Timing Value, Start-point, End-point, Leakage Power, Internal Power, Switching Power, Total Power
+ADDER_synth_Carry_Select, 76, 1938.048, 1548.649, 3486.697, 1948, a[0], , 1.91779e-08,5.96712e-05, 8.87618e-05, 1.48452e-04
+ADDER_synth_Carry_Select_Hector, 81, 1994.496, 1607.725, 3602.221, 2144, b[8], , 1.94137e-08,6.63332e-05, 9.41744e-05, 1.60527e-04
+ADDER_synth_Operator, 18, 1366.042, 642.481, 2008.523, 3664, b[0], , 1.37883e-08,4.21026e-05, 4.66545e-05, 8.87709e-05
