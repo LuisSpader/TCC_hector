@@ -1,0 +1,29 @@
+#####################################################################
+#
+# Innovus input globals file
+# Created by Genus(TM) Synthesis Solution on 06/12/2023 19:44:16
+#
+#####################################################################
+global setUserDataValue
+global set_global
+set cwd lpwd
+setUserDataValue init_verilog {layout/top.v}
+setUserDataValue init_design_netlisttype {Verilog}
+setUserDataValue init_design_settop {1}
+setUserDataValue init_top_cell {top}
+setUserDataValue init_mmmc_file {layout/top.mmode.tcl}
+setUserDataValue init_lef_file {/usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//cmos7rf_6ML_tech.lef /usr/eda/dk/ibm/cmrf7sf/digital_20111130/lef//ibm_cmos7rf_sc_12Track.lef}
+setUserDataValue fp_core_cntl {aspect}
+setUserDataValue fp_aspect_ratio {1.0000}
+setUserDataValue extract_shrink_factor {1.0}
+setUserDataValue init_assign_buffer {0}
+
+
+setUserDataValue init_cpf_file {}
+
+########## RTL ##########
+#setUserDataValue init_design_netlisttype {RTL}
+
+
+
+

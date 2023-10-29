@@ -1,0 +1,71 @@
+-- Somador GENERIC  --
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+-- USE ieee.numeric_std.ALL;
+-- USE work.config_package.ALL;
+USE WORK.ALL;
+
+ENTITY adder_generic_signed_FFH IS
+  GENERIC (BITS : NATURAL := 8);
+  PORT (
+    S, C : IN STD_LOGIC_VECTOR (BITS - 1 DOWNTO 0);
+    F    : OUT STD_LOGIC_VECTOR (BITS - 1 DOWNTO 0)
+  );
+END adder_generic_signed_FFH;
+
+ARCHITECTURE arch OF adder_generic_signed_FFH IS
+  -------------------- COMPONENTS ---------------------
+  COMPONENT half_adder IS
+    PORT (
+      a, b    : IN STD_LOGIC;
+      s, cout : OUT STD_LOGIC
+    );
+  END COMPONENT;
+
+  COMPONENT full_adder IS
+    PORT (
+      a, b, cin : IN STD_LOGIC;
+      s, cout   : OUT STD_LOGIC
+    );
+  END COMPONENT;
+
+  -------------------- SIGNALS ---------------------
+  SIGNAL carry : STD_LOGIC_VECTOR (BITS - 1 DOWNTO 0);
+
+  -------------------- BEGIN LOGIC ---------------------
+BEGIN
+  -- F(0) <= S(0);
+  ------- PRIMEIRO ADDER ------- adder 0
+  half_adder_inst : half_adder
+  PORT MAP(
+    a    => S(0),
+    b    => C(0),
+    s    => F(0),
+    cout => carry(0)
+  );
+  ----------------------------------------------
+
+  -------  SEGUNDO ADDER ATE O PENULTIMO ------- adders 1 a 6
+  loop_port_map : FOR i IN 1 TO ((BITS - 1) - 1) GENERATE
+    full_adder_inst_loop : full_adder
+    PORT MAP(
+      a    => S(i),
+      b    => C(i),
+      cin  => carry(i - 1),
+      s    => F(i),
+      cout => carry(i)
+    );
+  END GENERATE;
+
+  ------- ULTIMO ADDER  ------- adder 7
+  full_adder_inst_final : ENTITY work.full_adder
+    PORT MAP(
+      a    => S(BITS - 1),
+      b    => C(BITS - 1),
+      cin  => carry(BITS - 2),
+      s    => F(BITS - 1),
+      cout => carry(BITS - 1)
+
+    );
+END arch;

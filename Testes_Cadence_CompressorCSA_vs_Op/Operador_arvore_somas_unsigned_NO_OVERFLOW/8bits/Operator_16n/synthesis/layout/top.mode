@@ -1,0 +1,17 @@
+#####################################################################
+#
+# Innovus mode file
+# Created by Genus(TM) Synthesis Solution on 06/12/2023 19:41:08
+#
+#####################################################################
+
+
+# General Mode Settings
+###########################################################
+
+set_global timing_apply_default_primary_input_assertion false
+set_global timing_clock_phase_propagation both
+setAnalysisMode -asyncChecks noAsync
+setExtractRCMode -layerIndependent 1
+setPlaceMode -reorderScan false
+setExtractRCMode -engine preRoute
