@@ -15,7 +15,7 @@ END ENTITY;
 ARCHITECTURE rtl OF CSA IS
     SIGNAL carry_final : UNSIGNED((bits - 1) DOWNTO 0);
     SIGNAL c_lsb       : UNSIGNED((bits/2) DOWNTO 0);
-    SIGNAL c0, c1      : UNSIGNED((bits/2) - 1 DOWNTO 0);
+    SIGNAL c0, c1      : UNSIGNED((bits/2) DOWNTO 0);
     -- SIGNAL c0_odd, c1_odd : UNSIGNED(16 DOWNTO 0);
 
 BEGIN
