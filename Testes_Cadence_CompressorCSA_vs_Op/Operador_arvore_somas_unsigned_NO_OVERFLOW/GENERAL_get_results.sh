@@ -19,7 +19,7 @@ echo "Running script $script_name"
 # $dir/SPIRAL_a_mult_cte_CSA/sequence_0_addsub18_depth2_neg10_SEQ/$script_name
 # wait
 
-git add .
-script_date=$(date +%d-%m-%Y_%Hh%M)
-git commit -m "get Logic Synthesis results - $script_date"
-git push
+# git add .
+# script_date=$(date +%d-%m-%Y_%Hh%M)
+# git commit -m "get Logic Synthesis results - $script_date"
+# git push
