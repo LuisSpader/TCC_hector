@@ -84,8 +84,8 @@ BEGIN
 
     S_add      <= C0(BITS - 1) & S1(BITS - 1 DOWNTO 1);
 
-    A          <= STD_LOGIC_VECTOR('0' & S_add); -- 17 bits
-    B          <= STD_LOGIC_VECTOR('0' & C1);    -- 17 bits
+    A          <= unsigned('0' & S_add); -- 17 bits
+    B          <= unsigned('0' & C1);    -- 17 bits
 
     level7_adder_CSA_inst : CSA PORT MAP(
         a   => A,
