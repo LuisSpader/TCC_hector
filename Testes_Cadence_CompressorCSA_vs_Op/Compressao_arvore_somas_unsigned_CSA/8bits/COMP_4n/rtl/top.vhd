@@ -91,7 +91,7 @@ BEGIN
     level7_adder_CSA_inst : CSA PORT MAP(
         a   => A,
         b   => B,
-        res => s_res((BITS + 2) - 1 DOWNTO 1)
+        res => s_res
     );
     sum_all((BITS + 2) - 1 DOWNTO 1) <= STD_LOGIC_VECTOR(s_res);
     -- adder_inst : adder_generic_signed_FFH
