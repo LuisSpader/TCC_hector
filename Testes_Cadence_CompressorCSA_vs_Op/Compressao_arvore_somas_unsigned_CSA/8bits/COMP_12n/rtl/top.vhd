@@ -212,8 +212,8 @@ BEGIN
     y(2) <= F0(0);
 
     --------------------------------- LEVEL 5 ---------------------------------
-    A    <= "00" & F0(bits - 2 DOWNTO 1);               -- 16 bits
-    B    <= '0' & D1(bits - 1) & F1(bits - 3 DOWNTO 0); -- 16 bits
+    A    <= '0' & D1(bits - 1) & F0(bits - 2 DOWNTO 1); -- 16 bits
+    B    <= '0' & F1(bits - 2 DOWNTO 0);                -- 16 bits
 
     level7_adder_CSA_inst : CSA PORT MAP(
         a   => A,
@@ -221,33 +221,33 @@ BEGIN
         res => y((BITS + 3) - 1 DOWNTO 3)
     );
 
-    ------- PRIMEIRO ADDER ------- adder 0
-    level5_half_adder_inst : half_adder
-    PORT MAP(
-        a    => F0(1),
-        b    => F1(0),
-        s    => y(3),
-        cout => carry(0)
-    );
-    -------  SEGUNDO ADDER ATE O PENULTIMO ------- adders 1 a 7
-    loop_port_map : FOR i IN 1 TO (BITS - 2) GENERATE
-        full_adder_inst_loop : full_adder
-        PORT MAP(
-            a    => F0(i),
-            b    => F1(i - 1),
-            cin  => carry(i - 1),
-            s    => y(i + 3),
-            cout => carry(i)
-        );
-    END GENERATE;
-    -- y(BITS + 4) <= carry(BITS - 2);
+    -- ------- PRIMEIRO ADDER ------- adder 0
+    -- level5_half_adder_inst : half_adder
+    -- PORT MAP(
+    --     a    => F0(1),
+    --     b    => F1(0),
+    --     s    => y(3),
+    --     cout => carry(0)
+    -- );
+    -- -------  SEGUNDO ADDER ATE O PENULTIMO ------- adders 1 a 7
+    -- loop_port_map : FOR i IN 1 TO (BITS - 2) GENERATE
+    --     full_adder_inst_loop : full_adder
+    --     PORT MAP(
+    --         a    => F0(i),
+    --         b    => F1(i - 1),
+    --         cin  => carry(i - 1),
+    --         s    => y(i + 3),
+    --         cout => carry(i)
+    --     );
+    -- END GENERATE;
+    -- -- y(BITS + 4) <= carry(BITS - 2);
 
-    ------- ULTIMO ADDER ------- adder 8
-    level5_2_half_adder_inst : half_adder
-    PORT MAP(
-        a    => carry(BITS - 2),
-        b    => D1(BITS - 1),
-        s    => y(BITS + 2),
-        cout => y(BITS + 3)
-    );
+    -- ------- ULTIMO ADDER ------- adder 8
+    -- level5_2_half_adder_inst : half_adder
+    -- PORT MAP(
+    --     a    => carry(BITS - 2),
+    --     b    => D1(BITS - 1),
+    --     s    => y(BITS + 2),
+    --     cout => y(BITS + 3)
+    -- );
 END arch;
