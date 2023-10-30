@@ -24,6 +24,7 @@ ARCHITECTURE arch OF top IS
     SIGNAL S0, C0, S1, C1 : STD_LOGIC_VECTOR(BITS - 1 DOWNTO 0);
     SIGNAL S_add          : STD_LOGIC_VECTOR(BITS - 1 DOWNTO 0);
     SIGNAL A, B           : unsigned(17 - 1 DOWNTO 0);
+    SIGNAL s_res          : UNSIGNED((17 - 1) DOWNTO 0);
 
     COMPONENT CSA IS
         PORT (
@@ -90,15 +91,15 @@ BEGIN
     level7_adder_CSA_inst : CSA PORT MAP(
         a   => A,
         b   => B,
-        res => sum_all((BITS + 2) - 1 DOWNTO 1)
+        res => s_res((BITS + 2) - 1 DOWNTO 1)
     );
-
+    sum_all((BITS + 2) - 1 DOWNTO 1) <= STD_LOGIC_VECTOR(s_res);
     -- adder_inst : adder_generic_signed_FFH
     -- PORT MAP(
     --     S => S_add,
     --     C => C1,
     --     F => sum_all(BITS + 1 DOWNTO 1)
     -- );
-    y <= unsigned(sum_all); -- Numeric_std 
+    y                                <= unsigned(sum_all); -- Numeric_std 
 
 END arch;
