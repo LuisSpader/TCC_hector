@@ -331,8 +331,8 @@ BEGIN
         cout => F1(BITS)
     );
     --------------------------------- LEVEL 6 ---------------------------------
-    A <= "00" & F0(bits - 1 DOWNTO 1); -- 17 bits
-    B <= '0' & F1(bits - 1 DOWNTO 0);  -- 17 bits
+    A <= '0' & F0(bits DOWNTO 1); -- 17 bits
+    B <= F1(bits DOWNTO 0);       -- 17 bits
 
     level7_adder_CSA_inst : CSA PORT MAP(
         a   => A,
