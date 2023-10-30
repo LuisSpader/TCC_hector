@@ -23,7 +23,7 @@ ARCHITECTURE arch OF top IS
     SIGNAL sum_all        : STD_LOGIC_VECTOR((BITS + 2) - 1 DOWNTO 0);
     SIGNAL S0, C0, S1, C1 : STD_LOGIC_VECTOR(BITS - 1 DOWNTO 0);
     SIGNAL S_add          : STD_LOGIC_VECTOR(BITS - 1 DOWNTO 0);
-    SIGNAL A, B           : STD_LOGIC_VECTOR(17 - 1 DOWNTO 0);
+    SIGNAL A, B           : unsigned(17 - 1 DOWNTO 0);
 
     COMPONENT CSA IS
         PORT (
