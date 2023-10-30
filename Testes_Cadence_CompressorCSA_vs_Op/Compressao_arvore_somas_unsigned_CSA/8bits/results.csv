@@ -1,0 +1,5 @@
+COMP_4n, , , , , 4821, s_mult[16], y[16], , , 
+COMP_8n, , , , , 5445, s_mult[64], y[17], , , 
+COMP_12n, , , , , 5310, s_mult[17], y[18], , , 
+COMP_16n, , , , , 2063, s_mult[64], level7_adder_CSA_inst/b[0], , , 
+COMP_20n, , , , , 6282, s_mult[65], y[20], , , 
